@@ -26,14 +26,14 @@ Example diagram — agent–environment loop:
 ```mermaid
 flowchart LR
     subgraph Agent
-      S[Sensors] --> AF[Agent function/program (what action next?)] --> AC[Actuators]
+      S[Sensors] --> AF["Agent function/program (what action next?)"] --> AC[Actuators]
     end
     E((Environment)) -- percepts --> S
     AC -- actions --> E
 ```
 
 
-![Agent and environment](IAI/media/U1/s35.png)
+![Agent and environment](media/U1/s35.png)
 
 
 ---
@@ -57,7 +57,7 @@ flowchart LR
 ```
 
 
-![Knowledge-based agent](IAI/media/U2/b_s05_1.png)
+![Knowledge-based agent](media/U2/b_s05_1.png)
 
 
 **Declarative vs procedural:** TELL what it needs to know (flexible, explicit) vs encode behaviour directly as code (efficient, minimal explicit reasoning).
@@ -75,7 +75,7 @@ Key FOL inference rules:
 4. **Unification:** find θ such that SUBST(θ, p) = SUBST(θ, q) (used by GMP/resolution).
 
 
-![UI and EI rules](IAI/media/U3/s20_1.png)
+![UI and EI rules](media/U3/s20_1.png)
 
 
 ---
@@ -89,7 +89,7 @@ The **state space** is the set of all states reachable from the initial state vi
 **Example — planning (air cargo):** each state is a conjunction of ground fluents such as At(C₁, SFO) ∧ In(C₁, P₁) ∧ At(P₁, JFK); the state space is all fluent combinations reachable by Load/Unload/Fly actions.
 
 
-![image](IAI/media/U4/s08_1.png)
+![image](media/U4/s08_1.png)
 
 
 ---
@@ -111,7 +111,7 @@ $$P(M \mid S) = \frac{0.8 \times 0.0001}{0.1} = 0.0008$$
 Even with a stiff neck, meningitis is still unlikely because the prior is tiny.
 
 
-![inclusion–exclusion/Bayes context](IAI/media/U5/s13_1.png) ![simple Bayes net Cavity → Toothache, Catch](IAI/media/U5/s28_1.png)
+![inclusion–exclusion/Bayes context](media/U5/s13_1.png) ![simple Bayes net Cavity → Toothache, Catch](media/U5/s28_1.png)
 
 
 ---
@@ -127,7 +127,7 @@ In a Bayesian network, each node Xᵢ has a **Conditional Probability Table (CPT
 **Example:** P(Toothache | Cavity) — e.g., P(toothache | cavity) = 0.8, P(toothache | ¬cavity) = 0.1.
 
 
-![Burglary network CPTs](IAI/media/U5/s32_1.png) ![noisy-OR CPT](IAI/media/U6/w_s08_1.png)
+![Burglary network CPTs](media/U5/s32_1.png) ![noisy-OR CPT](media/U6/w_s08_1.png)
 
 
 ---
@@ -150,7 +150,7 @@ BFS traversal example: **S → A → B → C → D → G → H → E → F → I
 DFS traversal example: S → A → B → D → E → (backtrack) → C → G (goal).
 
 
-![BFS example](IAI/media/U1/s63_1.png) ![DFS example](IAI/media/U1/s67_1.png)
+![BFS example](media/U1/s63_1.png) ![DFS example](media/U1/s67_1.png)
 
 
 **Algorithms:** BFS uses a FIFO frontier and an explored set; DFS uses a LIFO frontier. DFS variants: depth-limited search, iterative deepening (combines DFS space with BFS completeness — O(bᵈ) time, O(bd) space).
@@ -186,7 +186,7 @@ function SIMULATED-ANNEALING(problem, schedule):
 **Vs hill climbing:** hill climbing always moves uphill and gets stuck at local maxima/plateaux/ridges; simulated annealing sometimes accepts downhill moves and escapes local optima.
 
 
-![state-space landscape](IAI/media/U1/s72_1.png) ![,`s84_1.png`,`s85_1.png` local max/plateau/ridge](IAI/media/U1/s83_1.png)
+![state-space landscape](media/U1/s72_1.png) ![,`s84_1.png`,`s85_1.png` local max/plateau/ridge](media/U1/s83_1.png)
 
 
 Applications: VLSI layout, airline scheduling, TSP, large optimisation problems.
@@ -228,7 +228,7 @@ Check:
 **Reasoning:** M = 1 (carry from thousands column must be 1 since max sum of two digits + carry < 20). S must be 8 or 9 (to produce a carry); with O = 0 and M = 1, S = 9. Column 2: E + O + carry = N + 10·carry → E = 5, N = 6. Column 1: N + R + carry = E + 10 → R = 8. Column 0: D + E = Y + 10 → D = 7, Y = 2.
 
 
-![cryptarithmetic](IAI/media/U2/s39_1.png) ![,`s50_1.png`,`s51_1.png` MRV/degree/LCV heuristics](IAI/media/U2/s49_1.png)
+![cryptarithmetic](media/U2/s39_1.png) ![,`s50_1.png`,`s51_1.png` MRV/degree/LCV heuristics](media/U2/s49_1.png)
 
 
 ---
@@ -253,7 +253,7 @@ Check:
 **Why definite clauses matter:** (1) read as IF–THEN rules, (2) inference by forward/backward chaining — entailment is **linear in KB size**, (3) basis of Prolog / logic programming.
 
 
-![Horn clause types](IAI/media/U2/b_s50_1.png)
+![Horn clause types](media/U2/b_s50_1.png)
 
 
 Example conversion: Student(x) ∧ WorksHard(x) ⇒ Pass(x) → ¬Student(x) ∨ ¬WorksHard(x) ∨ Pass(x) — Horn.
@@ -294,7 +294,7 @@ Example conversion: Student(x) ∧ WorksHard(x) ⇒ Pass(x) → ¬Student(x) ∨
 Contradiction ⇒ **Marcus hated Caesar** is proved.
 
 
-![crime resolution proof](IAI/media/U3/s29_2.png) ![curiosity resolution](IAI/media/U3/s31_1.png)
+![crime resolution proof](media/U3/s29_2.png) ![curiosity resolution](media/U3/s31_1.png)
 
 
 ---
@@ -334,7 +334,7 @@ Start from query Q:
 | Sound & complete for definite clauses; linear time | Depth-first; may loop without memoisation |
 
 
-![backward chaining proof tree](IAI/media/U3/s26_1.png) ![image](IAI/media/U3/s29_2.png)
+![backward chaining proof tree](media/U3/s26_1.png) ![image](media/U3/s29_2.png)
 
 
 ---
@@ -352,7 +352,7 @@ Approaches:
 6. **Partial-order planning (POP):** plan-space search with ordering constraints and causal links; least commitment; resolve threats by promotion/demotion.
 
 
-![forward vs backward](IAI/media/U4/s10_1.png) ![GRAPHPLAN spare tyre](IAI/media/U4/s16_2.png) ![partial-order plan](IAI/media/U4/s20_1.png)
+![forward vs backward](media/U4/s10_1.png) ![GRAPHPLAN spare tyre](media/U4/s16_2.png) ![partial-order plan](media/U4/s20_1.png)
 
 
 ---
@@ -380,7 +380,7 @@ Refinement(Go(Home, SFO),
 **Angelic semantics:** reachable set REACH(s, h) = states reachable by any implementation of h. Optimistic (over-approx) and pessimistic (under-approx) descriptions decide whether a plan works/fails or needs refinement.
 
 
-![HLA refinements](IAI/media/U4/s24_1.png) ![reachable sets](IAI/media/U4/s25_2.png)
+![HLA refinements](media/U4/s24_1.png) ![reachable sets](media/U4/s25_2.png)
 
 
 ---
@@ -410,7 +410,7 @@ Example: P(cavity | toothache) = 0.04 / 0.05 = 0.8.
 **Chain rule:** P(X₁,…,Xₙ) = Πᵢ P(Xᵢ | Xᵢ₋₁,…,X₁).
 
 
-![full joint distribution Toothache/Catch/Cavity](IAI/media/U5/v_s16_1.png)
+![full joint distribution Toothache/Catch/Cavity](media/U5/v_s16_1.png)
 
 
 ---
@@ -433,7 +433,7 @@ $$P(x_1,\dots,x_n) = \prod_i P(x_i \mid \text{Parents}(X_i))$$
 **Applications:** medical diagnosis (diseases → symptoms), troubleshooting, forecasting, decision support, sensor fusion, risk analysis.
 
 
-![burglary network CPTs](IAI/media/U5/s32_1.png) ![enumeration evaluation tree](IAI/media/U6/s23_1.png)
+![burglary network CPTs](media/U5/s32_1.png) ![enumeration evaluation tree](media/U6/s23_1.png)
 
 
 ---
@@ -455,7 +455,7 @@ Components of a Bayesian network:
 **Compactness:** a Boolean node with k Boolean parents needs 2ᵏ numbers; n nodes with ≤ k parents need O(n·2ᵏ) vs O(2ⁿ) for the full joint (burglary: 10 vs 31 numbers).
 
 
-![Markov blanket](IAI/media/U6/s10_1.png) ![burglary network with CPTs](IAI/media/U5/s32_1.png)
+![Markov blanket](media/U6/s10_1.png) ![burglary network with CPTs](media/U5/s32_1.png)
 
 
 ---
@@ -473,7 +473,7 @@ Components of a Bayesian network:
 **P(φ) = Σ over FOL worlds where φ holds** — probability of a first-order sentence.
 
 
-![relational example](IAI/media/U6/w_s14_1.png) ![first-order probability](IAI/media/U6/w_s16_1.png)
+![relational example](media/U6/w_s14_1.png) ![first-order probability](media/U6/w_s16_1.png)
 
 
 ---
@@ -496,7 +496,7 @@ An **intelligent agent** perceives its environment through sensors and acts thro
 5. **Learning agent** — learns from experience; four components: learning element, critic, performance element, problem generator (e.g., spam filter).
 
 
-![,`s42_1.png`,`s44_1.png`,`s46_1.png`,`s48_1.png` — the five agent diagrams](IAI/media/U1/s40_1.png)
+![,`s42_1.png`,`s44_1.png`,`s46_1.png`,`s48_1.png` — the five agent diagrams](media/U1/s40_1.png)
 
 
 ---
@@ -517,7 +517,7 @@ An **intelligent agent** perceives its environment through sensors and acts thro
 Best case (perfect move ordering): O(b^(m/2)) — effectively √b branching, twice as deep as minimax.
 
 
-![alpha-beta example](IAI/media/U2/s26_1.png) ![pruned nodes](IAI/media/U2/s27_1.png)
+![alpha-beta example](media/U2/s26_1.png) ![pruned nodes](media/U2/s27_1.png)
 
 
 ---
@@ -531,7 +531,7 @@ Best case (perfect move ordering): O(b^(m/2)) — effectively √b branching, tw
 Terms: constants (Richard, John), variables (x), complex terms (LeftLeg(John)). Atomic sentences: Brother(Richard, John).
 
 
-![model with five objects](IAI/media/U3/s07_1.png) ![FOL grammar](IAI/media/U3/s08_1.png)
+![model with five objects](media/U3/s07_1.png) ![FOL grammar](media/U3/s08_1.png)
 
 
 ---
@@ -568,7 +568,7 @@ A **Conditional Probability Table (CPT)** for node Xᵢ specifies P(Xᵢ | Paren
 **Example (burglary net):** P(A | B, E) table: T,T→0.95; T,F→0.94; F,T→0.29; F,F→0.001.
 
 
-![burglary network CPTs](IAI/media/U5/s32_1.png) ![noisy-OR CPT](IAI/media/U6/w_s08_1.png)
+![burglary network CPTs](media/U5/s32_1.png) ![noisy-OR CPT](media/U6/w_s08_1.png)
 
 
 ---
@@ -593,7 +593,7 @@ A **problem-solving agent** is a goal-based agent that decides what to do by fin
 **Example — route finding / TSP / VLSI layout / robot navigation.**
 
 
-![8-puzzle](IAI/media/U1/x_s106_1.jpg) ![search example](IAI/media/U1/s63_1.png)
+![8-puzzle](media/U1/x_s106_1.jpg) ![search example](media/U1/s63_1.png)
 
 
 ---
@@ -613,7 +613,7 @@ A **problem-solving agent** is a goal-based agent that decides what to do by fin
 Hill-climbing problems: local maxima, plateaux, ridges. Remedies: backtracking, big jumps, multi-direction, random restart. Simulated annealing improves on hill-climbing by accepting worse moves probabilistically.
 
 
-![BFS](IAI/media/U1/s63_1.png) ![DFS](IAI/media/U1/s67_1.png) ![state-space landscape](IAI/media/U1/s72_1.png) ![–`s85_1.png`](IAI/media/U1/s83_1.png)
+![BFS](media/U1/s63_1.png) ![DFS](media/U1/s67_1.png) ![state-space landscape](media/U1/s72_1.png) ![–`s85_1.png`](media/U1/s83_1.png)
 
 
 ---
@@ -634,7 +634,7 @@ Hill-climbing problems: local maxima, plateaux, ridges. Remedies: backtracking, 
 **Constraint propagation (arc consistency / AC-3):** arc X→Y consistent iff every value of X has a compatible value of Y; recheck neighbours when a domain changes; AC-3 is O(c·d³). Detects failures earlier than forward checking (e.g., NT and SA both forced blue but adjacent — forward checking misses this, AC-3 catches it).
 
 
-![map colouring](IAI/media/U2/s35_1.png) ![–`s47_1.png` backtracking](IAI/media/U2/s45_1.png) ![forward checking](IAI/media/U2/s55_1.png) ![–`s61_1.png` AC-3](IAI/media/U2/s57_1.png)
+![map colouring](media/U2/s35_1.png) ![–`s47_1.png` backtracking](media/U2/s45_1.png) ![forward checking](media/U2/s55_1.png) ![–`s61_1.png` AC-3](media/U2/s57_1.png)
 
 
 ---
@@ -655,7 +655,7 @@ Hill-climbing problems: local maxima, plateaux, ridges. Remedies: backtracking, 
 | Move ordering irrelevant | Best case needs best moves first |
 
 
-![minimax example](IAI/media/U2/s17_1.png) ![alpha-beta](IAI/media/U2/s26_1.png) ![pruned](IAI/media/U2/s27_1.png)
+![minimax example](media/U2/s17_1.png) ![alpha-beta](media/U2/s26_1.png) ![pruned](media/U2/s27_1.png)
 
 
 ---
@@ -675,7 +675,7 @@ Hill-climbing problems: local maxima, plateaux, ridges. Remedies: backtracking, 
 **Example KB (kinship):** ∀m,c Mother(c) = m ⇔ Female(m) ∧ Parent(m, c); Grandparent(g,c) ⇔ ∃p Parent(g,p) ∧ Parent(p,c).
 
 
-![model](IAI/media/U3/s07_1.png) ![grammar](IAI/media/U3/s08_1.png)
+![model](media/U3/s07_1.png) ![grammar](media/U3/s08_1.png)
 
 
 ---
@@ -704,7 +704,7 @@ MGU (most general unifier), occur check, standardising apart are key.
 | Production systems, deductive DBs | Prolog, question answering |
 
 
-![unification/UI-EI](IAI/media/U3/s20_1.png) ![backward chaining proof tree](IAI/media/U3/s26_1.png) ![crime resolution](IAI/media/U3/s29_2.png)
+![unification/UI-EI](media/U3/s20_1.png) ![backward chaining proof tree](media/U3/s26_1.png) ![crime resolution](media/U3/s29_2.png)
 
 
 ---
@@ -724,7 +724,7 @@ MGU (most general unifier), occur check, standardising apart are key.
 Heuristics from relaxed problems (ignore preconditions, ignore delete lists) make forward search effective (A* with admissible heuristic).
 
 
-![forward vs backward](IAI/media/U4/s10_1.png) ![spare tyre graph](IAI/media/U4/s16_2.png)
+![forward vs backward](media/U4/s10_1.png) ![spare tyre graph](media/U4/s16_2.png)
 
 
 ---
@@ -745,7 +745,7 @@ Classical planning approaches:
 - POP: Start → {Remove(Spare, Trunk), Remove(Flat, Axle)} unordered → PutOn(Spare, Axle) → Finish.
 
 
-![cake planning graph](IAI/media/U4/s14_1.png) ![spare tyre GRAPHPLAN](IAI/media/U4/s16_2.png) ![partial-order plan](IAI/media/U4/s20_1.png)
+![cake planning graph](media/U4/s14_1.png) ![spare tyre GRAPHPLAN](media/U4/s16_2.png) ![partial-order plan](media/U4/s20_1.png)
 
 
 ---
@@ -771,7 +771,7 @@ Classical planning approaches:
 **Axioms:** 0 ≤ P(A) ≤ 1; P(True)=1, P(False)=0; P(A∨B) = P(A) + P(B) − P(A∧B). De Finetti Dutch book — rational beliefs obey axioms.
 
 
-![full joint Toothache/Catch/Cavity](IAI/media/U5/v_s16_1.png)
+![full joint Toothache/Catch/Cavity](media/U5/v_s16_1.png)
 
 
 ---
@@ -793,7 +793,7 @@ $$P(\neg x_i \mid \text{parents}) = \prod q_j$$
 **3. Continuous variables:** discretisation (loses accuracy), linear Gaussian P(Cost|Harvest=h) = N(aₜh + bₜ, σₜ²), hybrid networks, probit/logit for discrete child of continuous parents.
 
 
-![noisy-OR table](IAI/media/U6/w_s08_1.png)
+![noisy-OR table](media/U6/w_s08_1.png)
 
 
 ---
@@ -817,7 +817,7 @@ $$P(x_1,\dots,x_n) = \prod_i P(x_i \mid \text{Parents}(X_i))$$
 **Compactness:** O(n·2ᵏ) vs O(2ⁿ) (burglary: 10 vs 31 numbers).
 
 
-![Markov blanket](IAI/media/U6/s10_1.png) ![burglary CPTs](IAI/media/U5/s32_1.png) ![enumeration tree](IAI/media/U6/s23_1.png)
+![Markov blanket](media/U6/s10_1.png) ![burglary CPTs](media/U5/s32_1.png) ![enumeration tree](media/U6/s23_1.png)
 
 
 ---
@@ -837,7 +837,7 @@ $$P(x_1,\dots,x_n) = \prod_i P(x_i \mid \text{Parents}(X_i))$$
 **Relational model example:** Honest(Reviewer) → Recommendation(Reviewer, Book); Quality(Book) → Recommendation(Reviewer, Book), shared across all reviewer–book pairs; unrolls to a Bayes net. Open-universe (BLOG) handles identity uncertainty (citation matching).
 
 
-![sprinkler network](IAI/media/U6/w_s13_1.png) ![relational example](IAI/media/U6/w_s14_1.png) ![first-order probability](IAI/media/U6/w_s16_1.png)
+![sprinkler network](media/U6/w_s13_1.png) ![relational example](media/U6/w_s14_1.png) ![first-order probability](media/U6/w_s16_1.png)
 
 
 ---
